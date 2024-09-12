@@ -1,0 +1,9 @@
+version: '3'
+services:
+  health_check:
+    image: health-check
+    build: .
+    container_name: health-check-container
+    env_file:
+      - .env
+    restart: always
