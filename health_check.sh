@@ -5,6 +5,7 @@ send_alert() {
   local message="$1"
   curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
   -d chat_id="$TELEGRAM_GROUP_CHAT_ID" \
+  -d message_thread_id="$MESSAGE_THREAD_ID" \
   -d text="$message"
 }
 
