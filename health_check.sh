@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # Function to send an alert message to Telegram
+
+echo MESSAGE_THREAD_ID $MESSAGE_THREAD_ID
+echo TELEGRAM_GROUP_CHAT_ID $TELEGRAM_GROUP_CHAT_ID
 send_alert() {
   local message="$1"
   curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
